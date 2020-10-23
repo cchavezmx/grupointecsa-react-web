@@ -1,16 +1,23 @@
 // LOGO DE EMPRESA ESTE VA CAMBIANDO SEGUN EL BOTON QUE SE OPRIMA
-import logoIta from '../assets/img/italogo.svg'
-import logoIndus from '../assets/img/logoIndustrial.svg'
-import logoCanaliza from '../assets/img/logoCanaliza.svg'
-import logoEguel from '../assets/img/logoEguel.svg'
-
-import logo from '../assets/img/italogo.svg'
+import logoIta from '../assets/img/logoITA.png'
+import logoIndus from '../assets/img/logoINDUS.png'
+import logoCanaliza from '../assets/img/logoCANALIZA.png'
+import logoEguel from '../assets/img/logoEGUEL.png'
+import logoPadnet from '../assets/img/logoPADNET.png'
+import logoGrupo from '../assets/img/logoGRUPO.png'
+import logoTecnica from '../assets/img/logoTENICA.png'
 
 const dataEmpresas = {
+    gti: {
+        titulo: 'Grupo Intecsa',
+        contenido: 'Es un conjunto de empresas especializadas en el campo de la construcción en el área de ingeniería eléctrica. Contamos con el equipo humano y tecnológico capaz de ofrecer a nuestros clientes: atención directa, respuesta inmediata y conocimiento integral de todos los aspectos relacionados con su proyecto.' ,
+        logo: logoGrupo,
+        video: 'https://www.youtube.com/watch?v=tX5kzeWS-88',
+    },
     ita : {
-        titulo: 'Soluciónes Integrales',
+        titulo: 'Instalaciones Tecnologicas Aplicadas',
         contenido: "Instalaciones Tecnológicas Aplicadas S. A. de C. V.  parte de GRUPO INTECSA: es una empresa dedicada a la instalación, planeación, construcción y mantenimiento de Centros Comerciales y Tiendas Departamentales especializada en proyectos electromecánicos cuyos servicios se extienden a todo el mercado nacional.",
-        logo: logo,
+        logo: logoIta,
     },
     indus: {
         titulo: 'Industrial Connect',
@@ -23,14 +30,14 @@ const dataEmpresas = {
         logo: logoCanaliza,
     },
     eguel : {
-        titulo: 'Renta',
+        titulo: 'Servicios de renta',
         contenido: "Flotilla de transportes, provisionales eléctricos, andamiaje, bienes raices y plantas de energía.",
         logo: logoEguel,
     },
     tecnica: {
         titulo: 'Servicios',
         contenido: 'Instalaciónes eléctricas en industrias y comercios. Dotamos de energía eléctrica a edificios, instalaciones, lugares públicos, infraestructuras, etc. Incluimos los equipos necesarios para asegurar su correcto funcionamiento y la conexión con los aparatos eléctricos correspondientes.',
-        logo: logo,
+        logo: logoTecnica,
     },
     padnet: {
         titulo: 'Sistema modular, integral de soportería y fijación.',
@@ -48,7 +55,7 @@ const dataEmpresas = {
             10: "Con Tan solo 7 Kg/m2, soporta hasta 70 Kg/m2",
             11: "Permite que las instalaciones tengan el órden que requiere las especificaciones de nuestros clientes.",
         },
-        logo: logo,
+        logo: logoPadnet,
     }
 }
 

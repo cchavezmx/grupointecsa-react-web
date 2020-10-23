@@ -1,17 +1,39 @@
-import React, { Fragment } from 'react'
+import React, { Fragment, useContext } from 'react'
 
 // materia ui
 import ButtonBase from '@material-ui/core/ButtonBase';
 
+// CONTEXT
+import { MenuContext } from '../../context/MenuContext'
+
+
 
 
 const Navbar = () => {
+
+  const {  isDrop, menuDroplet } = useContext(MenuContext)
+
     return (
         <Fragment>
             <nav>
-                <h3 className="logo">Grupo Intecsa</h3>
-               <ButtonBase><h3 className="logo">Menú</h3></ButtonBase>
+
+            {isDrop
+            ? <h3 className="logo">Grupo Intecsa</h3> 
+            : <ButtonBase
+            onClick={() => {}}
+            >
+            <h3 className="logo">Grupo Intecsa</h3>
+            </ButtonBase>
+            }
+            
+            {isDrop 
+            ? <h3 className="logo">Menú</h3> 
+            : <ButtonBase onClick={() => {menuDroplet()}}>
+            <h3 className="logo">Menú</h3>
+            </ButtonBase>
+            }
             </nav>
+            
         </Fragment>
     )
 }

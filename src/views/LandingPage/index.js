@@ -1,8 +1,8 @@
-import React, {Fragment, useState} from 'react'
+import React, { Fragment, useState, useContext } from 'react'
 
 //material
 import PhotoLibraryIcon from '@material-ui/icons/PhotoLibrary';
-import ButtonBase from '@material-ui/core/ButtonBase';
+// import ButtonBase from '@material-ui/core/ButtonBase';
 
 // motion DIV
 import { motion } from "framer-motion"
@@ -19,31 +19,32 @@ import eguel_ico from '../../assets/img/ico_eguel.svg'
 import tecnica_ico from '../../assets/img/ico_tenica.svg'
 import padnet_ico from '../../assets/img/ico_padnet.svg'
 
-
+import { MenuContext } from '../../context/MenuContext'
 //  datos
 import  dataEmpresas from '../../database'
-import logoinit from '../../assets/img/italogo.svg'
 
-const LandingPage = () => {
+// ReactPlayer
+import ReactPlayer from 'react-player'
 
-    const initValue = {
-        titulo: 'Soluciónes Integrales',
-        contenido: "Instalaciones Tecnológicas Aplicadas S. A. de C. V.  parte de GRUPO INTECSA: es una empresa dedicada a la instalación, planeación, construcción y mantenimiento de Centros Comerciales y Tiendas Departamentales especializada en proyectos electromecánicos cuyos servicios se extienden a todo el mercado nacional.",
-        logo: logoinit,
+const LandingPage = ( ) => {
 
-    }
+    const { initValue } = useContext(MenuContext)
+
     
     const setAllNull = () => {
             setListas(null)
             setLogo(null)
             setContenido(null)
             setTitulo(null)
+            setVideo(null)
     }
 
     const [ titulo, setTitulo ] = useState(initValue.titulo)
     const [ contenido, setContenido ] = useState(initValue.contenido)
     const [ logo, setLogo ] = useState(initValue.logo)
     const [ listas, setListas ] = useState(null)
+    const [ video, setVideo ] = useState(initValue.video)
+    
     
     const hanldeItaChange = () => {
         setAllNull()
@@ -81,6 +82,7 @@ const LandingPage = () => {
     }
 
     const hanldePadnetChange = (e) => {
+        setAllNull()
         if(e.target.id === "padnet"){
             setListas(dataEmpresas.padnet.listas)
         }
@@ -104,6 +106,7 @@ const LandingPage = () => {
                     <h2>{titulo}</h2>
                     <p>{contenido}</p>
                     <div>
+                {/* Listas opciones */}
                         {listas &&
                         Object.values(listas).map((item, key) => 
                                 <li className="info--listas">
@@ -111,8 +114,16 @@ const LandingPage = () => {
                                 </li>
                        )}
                     </div>
-                    
-
+                {/* video embebido */}
+                <div className={video ? "video--size" : null }>
+                    {video && <ReactPlayer
+                     url={video}
+                     className="video--size"
+                     height="100%"
+                     width="100%"
+                     />}
+                </div>
+                 <h2>Galería</h2>           
                 <div className="galeria">
                     <img src={foto_gal} alt="foto de galeria"/>
                     <img src={foto_gal} alt="foto de galeria"/>
@@ -122,6 +133,7 @@ const LandingPage = () => {
                     <img src={foto_gal} alt="foto de galeria"/>
                     <img src={foto_gal} alt="foto de galeria"/>
                     <img src={foto_gal} alt="foto de galeria"/>      
+                    <img src={foto_gal} alt="foto de galeria"/> 
                     <PhotoLibraryIcon fontSize="large" style={{color: '#FFFF' }} />
                     
                 </div>
