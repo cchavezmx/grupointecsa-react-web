@@ -77,8 +77,6 @@ const LandingPage = ( ) => {
                     <img src={foto_gal} alt="foto de galeria"/>
                     <img src={foto_gal} alt="foto de galeria"/>
                     <img src={foto_gal} alt="foto de galeria"/>
-                    <img src={foto_gal} alt="foto de galeria"/>      
-                    <img src={foto_gal} alt="foto de galeria"/> 
                     <PhotoLibraryIcon fontSize="large" style={{color: '#FFFF' }} />
                     
                 </div>

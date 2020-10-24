@@ -12,6 +12,7 @@ import LandingPage from './views/LandingPage'
 // Context
 import  MenuContextProvider  from  './context/MenuContext'
 import DataContextProvider from './context/DataContext'
+import ContactForm from './components/ContactForm';
 
 
 function App() {
@@ -22,7 +23,8 @@ function App() {
 
       <MenuContextProvider>
       <DataContextProvider>
-      <Modal />  
+      <Modal />
+      <ContactForm />
       <Menudrop />
       <Navbar/>  
       <LandingPage />
