@@ -1,4 +1,4 @@
-import React, { Fragment, useContext } from 'react';
+import React, { Fragment } from 'react';
 import './App.css';
 
 // componentes
@@ -10,6 +10,8 @@ import LandingPage from './views/LandingPage'
 
 // Context
 import  MenuContextProvider  from  './context/MenuContext'
+import DataContextProvider from './context/DataContext'
+
 
 function App() {
 
@@ -18,9 +20,11 @@ function App() {
     <Fragment>
 
       <MenuContextProvider>
+      <DataContextProvider>
       <Menudrop />
       <Navbar/>  
       <LandingPage />
+      </DataContextProvider>
       </MenuContextProvider>      
      
     </Fragment>

@@ -5,11 +5,13 @@ import ButtonBase from '@material-ui/core/ButtonBase';
 
 // CONTEXT
 import { MenuContext } from '../../context/MenuContext'
-
+import { DataContext } from '../../context/DataContext'
 
 
 
 const Navbar = () => {
+
+    const { gtiData } = useContext(DataContext)
 
   const {  isDrop, menuDroplet } = useContext(MenuContext)
 
@@ -20,7 +22,7 @@ const Navbar = () => {
             {isDrop
             ? <h3 className="logo">Grupo Intecsa</h3> 
             : <ButtonBase
-            onClick={() => {}}
+            onClick={() => {gtiData()}}
             >
             <h3 className="logo">Grupo Intecsa</h3>
             </ButtonBase>

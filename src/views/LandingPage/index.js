@@ -1,4 +1,4 @@
-import React, { Fragment, useState, useContext } from 'react'
+import React, { Fragment, useContext } from 'react'
 
 //material
 import PhotoLibraryIcon from '@material-ui/icons/PhotoLibrary';
@@ -19,77 +19,18 @@ import eguel_ico from '../../assets/img/ico_eguel.svg'
 import tecnica_ico from '../../assets/img/ico_tenica.svg'
 import padnet_ico from '../../assets/img/ico_padnet.svg'
 
-import { MenuContext } from '../../context/MenuContext'
-//  datos
-import  dataEmpresas from '../../database'
+//contexto 
+import  { DataContext }  from '../../context/DataContext'
+
 
 // ReactPlayer
 import ReactPlayer from 'react-player'
 
+
+
 const LandingPage = ( ) => {
 
-    const { initValue } = useContext(MenuContext)
-
-    
-    const setAllNull = () => {
-            setListas(null)
-            setLogo(null)
-            setContenido(null)
-            setTitulo(null)
-            setVideo(null)
-    }
-
-    const [ titulo, setTitulo ] = useState(initValue.titulo)
-    const [ contenido, setContenido ] = useState(initValue.contenido)
-    const [ logo, setLogo ] = useState(initValue.logo)
-    const [ listas, setListas ] = useState(null)
-    const [ video, setVideo ] = useState(initValue.video)
-    
-    
-    const hanldeItaChange = () => {
-        setAllNull()
-        setLogo(dataEmpresas.ita.logo)
-        setContenido(dataEmpresas.ita.contenido)
-        setTitulo(dataEmpresas.ita.titulo)        
-    }
-
-    const hanldeIndusChange = () => {
-        setAllNull()
-        setLogo(dataEmpresas.indus.logo)
-        setContenido(dataEmpresas.indus.contenido)
-        setTitulo(dataEmpresas.indus.titulo)        
-    }
-
-    const hanldeCanalizaChange = () => {
-        setAllNull()
-        setLogo(dataEmpresas.canaliza.logo)
-        setContenido(dataEmpresas.canaliza.contenido)
-        setTitulo(dataEmpresas.canaliza.titulo)        
-    }
-
-    const hanldeEguelChange = () => {
-        setAllNull()
-        setLogo(dataEmpresas.eguel.logo)
-        setContenido(dataEmpresas.eguel.contenido)
-        setTitulo(dataEmpresas.eguel.titulo)        
-    }
-
-    const hanldeTecnicaChange = () => {
-        setAllNull()
-        setLogo(dataEmpresas.tecnica.logo)
-        setContenido(dataEmpresas.tecnica.contenido)
-        setTitulo(dataEmpresas.tecnica.titulo)        
-    }
-
-    const hanldePadnetChange = (e) => {
-        setAllNull()
-        if(e.target.id === "padnet"){
-            setListas(dataEmpresas.padnet.listas)
-        }
-        setLogo(dataEmpresas.padnet.logo)
-        setContenido(dataEmpresas.padnet.contenido)
-        setTitulo(dataEmpresas.padnet.titulo)        
-    }
+    const { itaData, indusData, canalizaData, eguelData, tecnicaData, padnetData, titulo, contenido, logo, listas, video } = useContext(DataContext)
 
 
     return (
@@ -148,7 +89,7 @@ const LandingPage = ( ) => {
                             rotate: 0
                          }}
                     whileTap={{rotate: 180,}}     
-                    onClick={hanldeItaChange} 
+                    onClick={itaData} 
                     style={{ width: '70%' }}>
                     <img src={ita_ico} 
                     className='material--button' 
@@ -164,7 +105,7 @@ const LandingPage = ( ) => {
                         }}
                     whileTap={{rotate: 180,}}
                     disableTouchRipple={true}
-                    onClick={hanldeIndusChange} 
+                    onClick={indusData} 
                     style={{ width: '70%'}}>
                     <img src={indus_ico} 
                     className='material--button' 
@@ -180,7 +121,7 @@ const LandingPage = ( ) => {
                         }}
                     whileTap={{rotate: 180,}}
                     disableTouchRipple={true}
-                    onClick={hanldeCanalizaChange}
+                    onClick={canalizaData}
                     style={{ width: '70%'}}>
                     <img src={canaliza_ico} 
                     className='material--button' 
@@ -196,7 +137,7 @@ const LandingPage = ( ) => {
                         }} 
                     whileTap={{rotate: 180,}}
                     disableTouchRipple={true}
-                    onClick={hanldeEguelChange}
+                    onClick={eguelData}
                     style={{ width: '70%'}}>
                     <img src={eguel_ico} 
                     className='material--button' 
@@ -212,7 +153,7 @@ const LandingPage = ( ) => {
                         }}
                     whileTap={{rotate: 180,}}
                     disableTouchRipple={true}
-                    onClick={hanldeTecnicaChange}
+                    onClick={tecnicaData}
                     style={{ width: '70%'}}>
                     <img src={tecnica_ico} 
                     className='material--button' 
@@ -228,7 +169,7 @@ const LandingPage = ( ) => {
                         }}
                     whileTap={{rotate: 180,}}
                     disableTouchRipple={true}
-                    onClick={hanldePadnetChange}
+                    onClick={padnetData}
                     style={{ width: '70%'}}>
                     <img src={padnet_ico} 
                     id="padnet"
