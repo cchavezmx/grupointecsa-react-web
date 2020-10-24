@@ -4,6 +4,7 @@ import './App.css';
 // componentes
 import Navbar from './components/Navbar';
 import Menudrop from './components/Menudrop'
+import Modal from './components/Modal'
 // vistas
 import LandingPage from './views/LandingPage'
 
@@ -21,6 +22,7 @@ function App() {
 
       <MenuContextProvider>
       <DataContextProvider>
+      <Modal />  
       <Menudrop />
       <Navbar/>  
       <LandingPage />

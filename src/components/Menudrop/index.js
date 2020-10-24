@@ -16,9 +16,17 @@ const Menudrop = () => {
 
     const { isDrop, menuDroplet } = useContext(MenuContext)
 
+    const handleCloseOutside = (e) => {
+        if(e.target.id === "Menudrop")
+            menuDroplet()
+            console.log(e)
+        }
+
     return (
         <Fragment>
-        {isDrop && <motion.div 
+        {isDrop && <motion.div
+            onClick={handleCloseOutside} 
+            id="Menudrop"
             transition={{
                 type: "spring",
                 stiffness: 260,

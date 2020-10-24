@@ -8,6 +8,7 @@ export const MenuContext = createContext()
 const MenuContextProvider = (props) =>{
 
     const [ isDrop, setIsDrop ] = useState(false)
+    const [ isModal, setIsModal ] = useState(null)
 
 
     const menuDroplet = () =>{
@@ -22,7 +23,9 @@ const MenuContextProvider = (props) =>{
 
         <MenuContext.Provider
             value={{
-                isDrop, menuDroplet
+                isDrop, menuDroplet,
+                isModal, setIsModal
+
             }}
         >
             {props.children}

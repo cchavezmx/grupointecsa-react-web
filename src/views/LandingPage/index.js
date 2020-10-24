@@ -21,7 +21,7 @@ import padnet_ico from '../../assets/img/ico_padnet.svg'
 
 //contexto 
 import  { DataContext }  from '../../context/DataContext'
-
+import { MenuContext } from '../../context/MenuContext'
 
 // ReactPlayer
 import ReactPlayer from 'react-player'
@@ -31,6 +31,7 @@ import ReactPlayer from 'react-player'
 const LandingPage = ( ) => {
 
     const { itaData, indusData, canalizaData, eguelData, tecnicaData, padnetData, titulo, contenido, logo, listas, video } = useContext(DataContext)
+    const { setIsModal } = useContext(MenuContext)
 
 
     return (
@@ -66,7 +67,10 @@ const LandingPage = ( ) => {
                 </div>
                  <h2>Galería</h2>           
                 <div className="galeria">
-                    <img src={foto_gal} alt="foto de galeria"/>
+                    <img 
+                    onClick={() => {setIsModal(true)}}
+                    src={foto_gal} alt="foto de galeria"
+                    />
                     <img src={foto_gal} alt="foto de galeria"/>
                     <img src={foto_gal} alt="foto de galeria"/>
                     <img src={foto_gal} alt="foto de galeria"/>
