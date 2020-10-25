@@ -46,7 +46,7 @@ const ContactForm = () => {
          { isForm &&
             <div className="modal--form--backdrop">
             
-            <section className="center--into--divs">
+            <div className="center--into--divs">
             <div className="container--form--main">
                 <h2><button onClick={() => setIsForm(null)}><CancelIcon style={{ color: "#2569ce" }} fontSize="large" /></button></h2>
                 {/* componente de form de react hook from */}
@@ -92,7 +92,7 @@ const ContactForm = () => {
             </form>
 
             </div>
-            </section>
+            </div>
             </div>
         }
         </Fragment>
