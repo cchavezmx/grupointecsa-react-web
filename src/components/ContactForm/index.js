@@ -50,7 +50,7 @@ const ContactForm = () => {
             <div className="container--form--main">
                 <h2><button onClick={() => setIsForm(null)}><CancelIcon style={{ color: "#2569ce" }} fontSize="large" /></button></h2>
                 {/* componente de form de react hook from */}
-                <form onSubmit={handleSubmit(onSubmit)}>
+                <form className="container--form--main" onSubmit={handleSubmit(onSubmit)}>
                 <input
                     className={ errors?.name?.message ? "container--form--input--error" : "container--form--input"}
                     type="text"
