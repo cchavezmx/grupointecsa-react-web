@@ -12,7 +12,7 @@ const dataEmpresas = {
         titulo: 'Grupo Intecsa',
         contenido: 'Es un conjunto de empresas especializadas en el campo de la construcción en el área de ingeniería eléctrica. Contamos con el equipo humano y tecnológico capaz de ofrecer a nuestros clientes: atención directa, respuesta inmediata y conocimiento integral de todos los aspectos relacionados con su proyecto.' ,
         logo: logoGrupo,
-        video: 'https://www.youtube.com/watch?v=tX5kzeWS-88',
+        video: 'https://www.youtube.com/watch?v=8dur-PTY4K0',
         listas: false, 
     },
     ita : {
