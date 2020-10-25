@@ -14,13 +14,18 @@ import { motion } from "framer-motion"
 
 const Menudrop = () => {
 
-    const { isDrop, menuDroplet } = useContext(MenuContext)
+    const { isDrop, menuDroplet, contacFormHandled } = useContext(MenuContext)
 
     const handleCloseOutside = (e) => {
         if(e.target.id === "Menudrop")
             menuDroplet()
-            console.log(e)
         }
+    
+    const handleForm = () => {
+        contacFormHandled()
+        menuDroplet()
+
+    }
 
     return (
         <Fragment>
@@ -47,7 +52,7 @@ const Menudrop = () => {
             {/* seccion de contacto */}
                 <img src={whats} alt="icono de whattsapp"></img>
                 <img src={maps} alt="icono de maps"></img>
-                <img src={carta} alt="icono de mensaje"></img>
+                <button onClick={handleForm}><img src={carta} alt="icono de mensaje"></img></button>
             </div>
             {/* seccion de redes */}
             <div className="mdrop--menu">

@@ -9,6 +9,7 @@ const MenuContextProvider = (props) =>{
 
     const [ isDrop, setIsDrop ] = useState(false)
     const [ isModal, setIsModal ] = useState(null)
+    const [ isForm, setIsForm ] = useState(null)
 
 
     const menuDroplet = () =>{
@@ -19,12 +20,21 @@ const MenuContextProvider = (props) =>{
         }
     }
 
+    const contacFormHandled = () =>{
+        if(isForm){
+            setIsForm(null)
+        }else if(!isForm){
+            setIsForm(true)
+        }
+    }
+
     return(
 
         <MenuContext.Provider
             value={{
                 isDrop, menuDroplet,
-                isModal, setIsModal
+                isModal, setIsModal,
+                isForm, contacFormHandled, setIsForm,
 
             }}
         >

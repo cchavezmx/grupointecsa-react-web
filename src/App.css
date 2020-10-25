@@ -182,7 +182,6 @@ hr{
 /*  STILOS DE NAV PRINCIPA DROPEABLE */
 .menu--drop{
    border: solid 1px powderblue;
-
    position: fixed;
    display: flex;
    flex-direction: column;
@@ -271,9 +270,9 @@ hr{
 }
 
 
-/* STILOS DE FORMULARIO */
+/* FORMULARIO DE CONTACTO*/
 .modal--form--backdrop{
-   padding-top: 5rem;
+   padding-top: 10rem;
    position: fixed;
    width: 100%;
    height: 100%;
@@ -282,24 +281,112 @@ hr{
 }
 
 .container--form--main{
+   display: flex;
+   align-items: center;
+   flex-direction: column;
+
    padding: 0.8rem;
-   width: 70%;
+   margin: 0.3rem;
+   width: 40vh;
    background: white;
    color: black;
-   border-radius: 0.3rem;
+   border-radius: 10px;
    border: rgb(47, 62, 199) 2px solid 2px;
 }
 
 
+.container--form--main > h2{
+   text-align: end;
+   width: 100%;
+   padding-right: 0.8rem;
+   color: rgb(37, 105, 206);
+}
+
+.container--form--input {
+   border: none;
+   outline: none;
+   box-shadow: 0px 0px 2px  rgb(187, 187, 187);
+   margin: 0.8rem;
+   background: rgb(250,250,250);
+   padding-left: 1rem;
+   font-size: 1rem;
+   font-family: PopRegular;
+   height: 3rem;
+   width: 35vh;
+}
+
+.container--form--input--error {
+   
+   border: none;
+   outline: none;
+   box-shadow: 0px 0px 2px  rgb(187, 187, 187);
+   margin: 0.8rem;
+   background: rgba(245, 4, 4, 0.26);
+   padding-left: 1rem;
+   font-size: 1rem;
+   font-family: PopRegular;
+   height: 3rem;
+   width: 35vh;
+}
+
+.form--box--msg{
+   border: none;
+   outline: none;
+   box-shadow: 0px 0px 2px  rgb(187, 187, 187);
+   margin: 0.8rem;
+   background: rgb(250,250,250);
+   padding: 0.3rem;
+   font-size: 1rem;
+   font-family: PopRegular;
+   width: 35vh;
+   resize: none;
+   height: 10rem;
+}
+
+.btn--submit--contact{
+   margin: .5em;
+   padding: .7em 1.5em;
+   font-family: PopBlod;
+   color: white;
+   background-color: rgb(37, 105, 206);
+   border: 2px solid rgba(112,111,211,0);
+   border-radius: 8px;
+   outline: none;
+   cursor: pointer;
+   transition: 0.3ms;
+   width: 8rem;
+}
+
+.btn--submit--contact:focus{
+   background-color: rgb(14, 44, 177);   
+}
 
 
+/* COMO QUE LOS BASICOS */
 
+button{
+   border: none;
+   outline: none;
+   background: none;
+}
 
-/* COMO QUE BASICOS */
+button:focus{
+   box-shadow: 0px 0px 2px  rgb(40, 124, 163);
+}
+
+.error{
+   padding-left: 1em;
+   color: red;
+   font-family: PopRegular;
+}
 
 .center--into--divs{
    display: flex;
    justify-content: center;
+}
+
+.padding--left{
+   padding-left: 3rem;
 }
 
 @font-face{

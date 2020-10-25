@@ -14,7 +14,8 @@
     "react-hook-form": "^6.9.6",
     "react-player": "^2.6.2",
     "react-scripts": "3.4.4",
-    "react-youtube": "^7.13.0"
+    "react-youtube": "^7.13.0",
+    "yup": "^0.29.3"
   },
   "scripts": {
     "dev": "react-scripts start",
