@@ -273,7 +273,8 @@ hr{
 /* FORMULARIO DE CONTACTO*/
 .modal--form--backdrop{
    padding-top: 20%;
-   position: fixed;
+   padding-bottom: 20%;
+   position: relative;
    width: 100%;
    height: 100%;
    background: rgba(0, 0, 0, 0.795);
@@ -288,6 +289,7 @@ hr{
    padding: 0.8rem;
    margin: 0.3rem;
    width: 40vh;
+   height: auto;
    background: white;
    color: black;
    border-radius: 10px;
