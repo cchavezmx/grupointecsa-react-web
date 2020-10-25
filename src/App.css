@@ -284,14 +284,13 @@ hr{
    display: flex;
    align-items: center;
    flex-direction: column;
-
    padding: 0.3rem;
    /* margin: 0.3rem; */
    width: 90%;
    background: white;
    color: black;
    border-radius: 10px;
-   border: rgb(47, 62, 199) 2px solid 2px;
+   /* border: rgb(47, 62, 199) 2px solid 2px; */
 }
 
 
