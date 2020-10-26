@@ -7,7 +7,6 @@
 
 html{
   background: radial-gradient( rgb(1, 54, 107, 81.36%), rgb(1, 54, 104, 100%));
-  /* background-repeat: no-repeat; */
   background-size: cover; 
 }
 
@@ -34,8 +33,7 @@ body{
 
 .portafolio{
   color: white;
-  /* background: radial-gradient(rgba(1,54,107,77), rgba(1,54,104,100)); */
-  overflow: hidden;
+    overflow: hidden;
 }
 
 /* logo cotniene los estilos de letras para los botones */
@@ -285,13 +283,10 @@ hr{
    align-items: center;
    flex-direction: column;
    padding: 0.3rem;
-   /* margin: 0.3rem; */
-   /* width: 90%; */
    width: 50vh;
    background: white;
    color: black;
    border-radius: 10px;
-   /* border: rgb(47, 62, 199) 2px solid 2px; */
 }
 
 
@@ -312,7 +307,6 @@ hr{
    font-size: 1rem;
    font-family: PopRegular;
    height: 3rem;
-   /* width: 35vh; */
    width: 90%;
 }
 
@@ -326,7 +320,7 @@ hr{
    font-size: 1rem;
    font-family: PopRegular;
    height: 3rem;
-   width: 100%;
+   width: 90%;
 }
 
 .form--box--msg{
@@ -360,7 +354,6 @@ hr{
 .btn--submit--contact:focus{
    background-color: rgb(14, 44, 177);   
 }
-
 
 /* COMO QUE LOS BASICOS */
 

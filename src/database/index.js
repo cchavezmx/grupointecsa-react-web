@@ -16,7 +16,7 @@ const dataEmpresas = {
         listas: false, 
     },
     ita : {
-        titulo: 'Instalaciones Tecnologicas Aplicadas',
+        titulo: 'INGENIERÍA ELÉCTRICA',
         contenido: "Instalaciones Tecnológicas Aplicadas S. A. de C. V.  parte de GRUPO INTECSA: es una empresa dedicada a la instalación, planeación, construcción y mantenimiento de Centros Comerciales y Tiendas Departamentales especializada en proyectos electromecánicos cuyos servicios se extienden a todo el mercado nacional.",
         logo: logoIta,
         video: false,
@@ -29,7 +29,7 @@ const dataEmpresas = {
         video: false,
     },
     canaliza : {
-        titulo: 'Canalizacion y Soporteria',
+        titulo: 'Canalización y Soporteria',
         contenido: "Nos dedicamos a la transformación de la materia prima, destinándola a diferentes áreas de producción eléctrica. Entre nuestros productos están: Acometidas a ducto, brakets, caja pos, chicote flexible, coples para ducto, derivación T, registros, tapas, zapatas, marco nivelador, kit de mastil, punta y retenida de pararrayos, etcétera.",
         logo: logoCanaliza,
         video: false,
