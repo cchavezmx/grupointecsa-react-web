@@ -57,12 +57,14 @@ const LandingPage = ( ) => {
                        )}
                     </div>
                 {/* video embebido */}
-                <div className={video ? "video--size" : null }>
+                <div className={video ? "video--wrapper" : null }>
                     {video && <ReactPlayer
                      url={video}
-                     className="video--size"
+                     className="react-player"
                      height="100%"
                      width="100%"
+                     playing={true}
+                     controls={true}
                      />}
                 </div>
                  <h2>Galería</h2>           

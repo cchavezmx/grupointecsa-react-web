@@ -66,7 +66,7 @@ const dataEmpresas = {
             11: "Permite que las instalaciones tengan el órden que requiere las especificaciones de nuestros clientes.",
         },
         logo: logoPadnet,
-        video: false,
+        video: 'https://youtu.be/tqcCj5pVx2g',
     }
 }
 
